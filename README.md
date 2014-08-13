@@ -16,7 +16,7 @@ Options
 ```yml
 build:
     after-steps:
-        - wantedly/pretty-slack-notify:
+        - iansmith9876/pretty-slack-notify:
             team: mycompany
             token: $SLACK_API_TOKEN
             channel: dev
