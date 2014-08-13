@@ -28,11 +28,14 @@ git_branch = ENV["WERCKER_GIT_BRANCH"]
 started_by = ENV["WERCKER_STARTED_BY"]
 
 def message(app_name, app_url, build_url, git_commit, git_branch, started_by, status)
-  "[[#{app_name}](#{app_url})] [build(#{git_commit[0,8]})](#{build_url}) of #{git_branch} by #{started_by} #{status}"
+	if status == "passed"
+  	"[[#{app_name}](#{app_url})] [build(#{git_commit[0,8]})](#{build_url}) of #{git_branch} by #{started_by} passed."
+  else
+  	"[[#{app_name}](#{app_url})] [build(#{git_commit[0,8]})](#{build_url}) of #{git_branch} by #{started_by} failed!"
 end
 
 def icon_url(status)
-  "https://raw.githubusercontent.com/wantedly/step-pretty-slack-notify/master/icons/#{status}.jpg"
+  "https://raw.githubusercontent.com/iansmith9876/step-pretty-slack-notify/master/icons/#{status}.jpg"
 end
 
 def username_with_status(username, status)

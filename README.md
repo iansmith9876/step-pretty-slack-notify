@@ -1,8 +1,6 @@
 # Slack Notify Step
 Posts wercker build status to a [Slack Channel](https://slack.com/).
 
-![screenshot](https://raw.githubusercontent.com/wantedly/step-pretty-slack-notify/master/screenshot.png)
-
 ## REQUIREMENTS
 
 * `team` - Your Slack team subdomain.
