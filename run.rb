@@ -32,6 +32,7 @@ def message(app_name, app_url, build_url, git_commit, git_branch, started_by, st
   	"[[#{app_name}](#{app_url})] [build(#{git_commit[0,8]})](#{build_url}) of #{git_branch} by #{started_by} passed."
   else
   	"[[#{app_name}](#{app_url})] [build(#{git_commit[0,8]})](#{build_url}) of #{git_branch} by #{started_by} failed!"
+  end
 end
 
 def icon_url(status)
